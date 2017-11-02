@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct ChannelReponse: Codable {
 	struct Channel: Codable {
 		var channelId: Int64

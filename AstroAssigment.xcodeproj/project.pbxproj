@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0E1E19E21FA9C9CB00D438C1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E11FA9C9CB00D438C1 /* Model.swift */; };
-		0E1E19E41FA9CB1D00D438C1 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E31FA9CB1D00D438C1 /* NetworkLayer.swift */; };
+		0E1E19E41FA9CB1D00D438C1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E31FA9CB1D00D438C1 /* Request.swift */; };
 		0E1E19E61FA9CE5900D438C1 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E51FA9CE5900D438C1 /* ChannelListViewController.swift */; };
 		0E1E19E81FA9CEF400D438C1 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E71FA9CEF400D438C1 /* ChannelListViewModel.swift */; };
+		0E1E19EC1FA9E31300D438C1 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19EB1FA9E31300D438C1 /* Webservice.swift */; };
+		0E1E19EE1FA9E3A700D438C1 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19ED1FA9E3A700D438C1 /* Commons.swift */; };
+		0E1E19F01FA9E66600D438C1 /* ServiceConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19EF1FA9E66600D438C1 /* ServiceConfig.swift */; };
+		0E1E19F21FA9E67F00D438C1 /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19F11FA9E67F00D438C1 /* Dispatcher.swift */; };
+		0E1E19F51FA9E88E00D438C1 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19F41FA9E88E00D438C1 /* Response.swift */; };
+		0E1E19F71FA9FE4300D438C1 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 0E1E19F61FA9FE4300D438C1 /* Cartfile */; };
+		0E1E19FA1FAA001A00D438C1 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1E19F91FAA001A00D438C1 /* PromiseKit.framework */; };
+		0E1E19FD1FAAC19800D438C1 /* ChannelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19FC1FAAC19800D438C1 /* ChannelListCell.swift */; };
 		0E3774B71FA2F46C0038814B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E3774B61FA2F46C0038814B /* AppDelegate.swift */; };
 		0E3774BE1FA2F46C0038814B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E3774BD1FA2F46C0038814B /* Assets.xcassets */; };
 		0E3774C11FA2F46C0038814B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E3774BF1FA2F46C0038814B /* LaunchScreen.storyboard */; };
@@ -19,9 +27,17 @@
 
 /* Begin PBXFileReference section */
 		0E1E19E11FA9C9CB00D438C1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		0E1E19E31FA9CB1D00D438C1 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		0E1E19E31FA9CB1D00D438C1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		0E1E19E51FA9CE5900D438C1 /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		0E1E19E71FA9CEF400D438C1 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		0E1E19EB1FA9E31300D438C1 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		0E1E19ED1FA9E3A700D438C1 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
+		0E1E19EF1FA9E66600D438C1 /* ServiceConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfig.swift; sourceTree = "<group>"; };
+		0E1E19F11FA9E67F00D438C1 /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		0E1E19F41FA9E88E00D438C1 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0E1E19F61FA9FE4300D438C1 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		0E1E19F91FAA001A00D438C1 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = SOURCE_ROOT; };
+		0E1E19FC1FAAC19800D438C1 /* ChannelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListCell.swift; sourceTree = "<group>"; };
 		0E3774B31FA2F46C0038814B /* AstroAssigment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AstroAssigment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E3774B61FA2F46C0038814B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E3774BD1FA2F46C0038814B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1E19FA1FAA001A00D438C1 /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,13 +63,45 @@
 			children = (
 				0E1E19E71FA9CEF400D438C1 /* ChannelListViewModel.swift */,
 				0E1E19E51FA9CE5900D438C1 /* ChannelListViewController.swift */,
+				0E1E19FC1FAAC19800D438C1 /* ChannelListCell.swift */,
 			);
 			path = Channel;
+			sourceTree = "<group>";
+		};
+		0E1E19EA1FA9E2F500D438C1 /* NetWorkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E19F31FA9E6DB00D438C1 /* NetworkCore */,
+				0E1E19EB1FA9E31300D438C1 /* Webservice.swift */,
+			);
+			path = NetWorkLayer;
+			sourceTree = "<group>";
+		};
+		0E1E19F31FA9E6DB00D438C1 /* NetworkCore */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E19E31FA9CB1D00D438C1 /* Request.swift */,
+				0E1E19F11FA9E67F00D438C1 /* Dispatcher.swift */,
+				0E1E19EF1FA9E66600D438C1 /* ServiceConfig.swift */,
+				0E1E19ED1FA9E3A700D438C1 /* Commons.swift */,
+				0E1E19F41FA9E88E00D438C1 /* Response.swift */,
+			);
+			path = NetworkCore;
+			sourceTree = "<group>";
+		};
+		0E1E19F81FAA000B00D438C1 /* FrameWork */ = {
+			isa = PBXGroup;
+			children = (
+				0E1E19F91FAA001A00D438C1 /* PromiseKit.framework */,
+			);
+			path = FrameWork;
 			sourceTree = "<group>";
 		};
 		0E3774AA1FA2F46C0038814B = {
 			isa = PBXGroup;
 			children = (
+				0E1E19F81FAA000B00D438C1 /* FrameWork */,
+				0E1E19F61FA9FE4300D438C1 /* Cartfile */,
 				0E3774B51FA2F46C0038814B /* AstroAssigment */,
 				0E3774B41FA2F46C0038814B /* Products */,
 			);
@@ -71,7 +120,7 @@
 			children = (
 				0E3774B61FA2F46C0038814B /* AppDelegate.swift */,
 				0E1E19E11FA9C9CB00D438C1 /* Model.swift */,
-				0E1E19E31FA9CB1D00D438C1 /* NetworkLayer.swift */,
+				0E1E19EA1FA9E2F500D438C1 /* NetWorkLayer */,
 				0E6ED2E21FA2F96400E89FC0 /* Main.storyboard */,
 				0E1E19E91FA9D45E00D438C1 /* Channel */,
 				0E3774BD1FA2F46C0038814B /* Assets.xcassets */,
@@ -91,6 +140,7 @@
 				0E3774AF1FA2F46C0038814B /* Sources */,
 				0E3774B01FA2F46C0038814B /* Frameworks */,
 				0E3774B11FA2F46C0038814B /* Resources */,
+				0E1E19FB1FAA004300D438C1 /* copy-frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,19 +192,44 @@
 			files = (
 				0E6ED2E31FA2F96400E89FC0 /* Main.storyboard in Resources */,
 				0E3774C11FA2F46C0038814B /* LaunchScreen.storyboard in Resources */,
+				0E1E19F71FA9FE4300D438C1 /* Cartfile in Resources */,
 				0E3774BE1FA2F46C0038814B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E1E19FB1FAA004300D438C1 /* copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/PromiseKit.framework",
+			);
+			name = "copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0E3774AF1FA2F46C0038814B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E1E19EE1FA9E3A700D438C1 /* Commons.swift in Sources */,
 				0E1E19E81FA9CEF400D438C1 /* ChannelListViewModel.swift in Sources */,
-				0E1E19E41FA9CB1D00D438C1 /* NetworkLayer.swift in Sources */,
+				0E1E19F21FA9E67F00D438C1 /* Dispatcher.swift in Sources */,
+				0E1E19F01FA9E66600D438C1 /* ServiceConfig.swift in Sources */,
+				0E1E19FD1FAAC19800D438C1 /* ChannelListCell.swift in Sources */,
+				0E1E19F51FA9E88E00D438C1 /* Response.swift in Sources */,
+				0E1E19E41FA9CB1D00D438C1 /* Request.swift in Sources */,
+				0E1E19EC1FA9E31300D438C1 /* Webservice.swift in Sources */,
 				0E3774B71FA2F46C0038814B /* AppDelegate.swift in Sources */,
 				0E1E19E21FA9C9CB00D438C1 /* Model.swift in Sources */,
 				0E1E19E61FA9CE5900D438C1 /* ChannelListViewController.swift in Sources */,
@@ -288,6 +363,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YNGXG4FX22;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AstroAssigment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.hungnguyen.com.AstroAssigment;
@@ -303,6 +382,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YNGXG4FX22;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AstroAssigment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = private.hungnguyen.com.AstroAssigment;
