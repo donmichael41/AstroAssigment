@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct ChannelReponse: Codable {
+struct ChannelListReponse: Codable {
 	struct Channel: Codable {
 		var channelId: Int64
 		var channelStbNumber: Int64

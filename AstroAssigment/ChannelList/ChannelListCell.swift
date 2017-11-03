@@ -18,6 +18,7 @@ class ChannelListCell: UITableViewCell {
 	override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+		self.selectionStyle = .none
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,7 +35,7 @@ class ChannelListCell: UITableViewCell {
 		accessoryType = .none
 	}
 
-	func configCell(with channel: ChannelReponse.Channel)  {
+	func configCell(with channel: ChannelListReponse.Channel)  {
 		nameLabel.text = channel.channelTitle
 		numberLabel.text = String(describing: channel.channelStbNumber)
 		idLabel.text = String(describing: channel.channelId)

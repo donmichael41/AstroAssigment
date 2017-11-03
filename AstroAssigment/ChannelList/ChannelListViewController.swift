@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
  let channelListCellIndentifier = "ChannelListCellIndentifier"
 
 class ChannelListViewController: UIViewController {
@@ -17,7 +19,7 @@ class ChannelListViewController: UIViewController {
 	
 	var observationSegment: NSKeyValueObservation!
 	
-	var channels: [ChannelReponse.Channel]? {
+	var channels: [ChannelListReponse.Channel]? {
 		didSet {
 			DispatchQueue.main.async {
 				self.tableView.reloadData()
@@ -25,37 +27,104 @@ class ChannelListViewController: UIViewController {
 		}
 	}
 	
+	// MARK: - UIProperties
+	var stackView = UIStackView.autolayoutView()
+	var titleStackView = UIStackView.autolayoutView()
+	var actionButton = UIButton.autolayoutView()
+	var stateImageView = UIImageView.autolayoutView()
+	
+	lazy var dataStateSubtitleLabel: UILabel = {
+		let label = UILabel.autolayoutView()
+		label.textColor = .gray
+		return label
+	}()
+	
+	lazy var spinner: UIActivityIndicatorView = {
+		return UIActivityIndicatorView(activityIndicatorStyle: .gray)
+	}()
+	
+	
+	var buttonAction: (() -> Void)?
+	
+	var currentState = TableState.unknown {
+		didSet {
+			DispatchQueue.main.async {
+				self.change(with: self.currentState)
+			}
+		}
+	}
+	
+	
 	var favourite = [String: Any]()
 	
-	// MARK: - View Cicle
+	override func viewDidLayoutSubviews() {
+		super.viewDidLayoutSubviews()
+		setupTableState()
+	}
 	
+	var stateViewCenterPositionOffset = CGPoint(x: 0.0, y: 0.0)
+	
+	// MARK: - Setup UI
+	func setupTableState() {
+		titleStackView.axis = .vertical
+		titleStackView.distribution = .equalSpacing
+		titleStackView.alignment = .center
+		titleStackView.spacing = 8.0
+		
+		stackView.axis = .vertical
+		stackView.distribution = .equalSpacing
+		stackView.alignment = .center
+		stackView.spacing = 16.0
+		
+		titleStackView.addArrangedSubview(dataStateSubtitleLabel)
+		
+		stackView.addArrangedSubview(spinner)
+		stackView.addArrangedSubview(stateImageView)
+		stackView.addArrangedSubview(titleStackView)
+		
+		view.addSubview(stackView)
+		//Constraints
+		stackView._setCenterAlignWith(view: self.tableView, offset: stateViewCenterPositionOffset)
+	}
+	
+	// MARK: - View Cicle
 	override func viewDidLoad() {
         super.viewDidLoad()
 		setupTable()
-		
 		setupObservation()
-		
-		WebAPI.shared.fetchChannelList() { [weak self] channelReponse in
-			guard let channelReponse = channelReponse else { return }
-			self?.channels = channelReponse.channels
-		}
-		if let favourite = UserDefaults.standard.dictionary(forKey: "favouriteChannel") {
-			self.favourite = favourite
-		}
-		
-		
 		NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillTerminate, object: nil, queue: nil) { [weak self] (_) in
 			if let favourite = self?.favourite {
 				
 				UserDefaults.standard.set(favourite, forKey: "favouriteChannel")
 			}
-			
-			NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
 		}
-		
     }
 	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		fetch()
+	}
 	
+	// MARK: - Fetch dat
+	
+	private func fetch() {
+		currentState = .loading(message: "Loading")
+		WebAPI.shared.fetchChannelList() { [weak self] channelReponse in
+			guard let channelReponse = channelReponse else {
+				if let _ = self?.channels  {
+					self?.currentState = .dataAvaible
+				} else {
+					self?.currentState = .showMess(image: "server_error", title: "SERVER ERROR", message: "We will be back soon")
+				}
+				return
+			}
+			self?.channels = channelReponse.channels
+			self?.currentState = .dataAvaible
+		}
+		if let favourite = UserDefaults.standard.dictionary(forKey: "favouriteChannel") {
+			self.favourite = favourite
+		}
+	}
 
 }
 enum SortType {
@@ -67,7 +136,7 @@ extension ChannelListViewController {
 		tableView.dataSource = self
 		tableView.delegate = self
 		tableView.allowsMultipleSelection = true
-		tableView.separatorStyle = .none
+		
 	}
 	
 	func setupObservation() {
@@ -85,7 +154,7 @@ extension ChannelListViewController {
 		}
 	}
 	
-	func sort(by sortType: SortType, with channels: [ChannelReponse.Channel]) -> [ChannelReponse.Channel] {
+	func sort(by sortType: SortType, with channels: [ChannelListReponse.Channel]) -> [ChannelListReponse.Channel] {
 		switch sortType {
 		case .channelNumber:
 			return channels.sorted { (lhs, rhs)  in
@@ -114,22 +183,16 @@ extension ChannelListViewController: UITableViewDelegate {
 		guard let id = channels?[indexPath.row].channelId else { return }
 		favourite["\(id)"] = nil
 	}
-
-//	func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-//		if let oldIndex = tableView.indexPathForSelectedRow {
-//			tableView.cellForRow(at: oldIndex)?.accessoryType = .none
-//		}
-//		tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-//
-//		return indexPath
-//	}
 }
 
 // MARK: - UITableViewDataSource
 extension ChannelListViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		guard let channels = channels else { return 0 }
-		
+		guard let channels = channels, !channels.isEmpty else {
+			tableView.separatorStyle = .none
+			return 0
+		}
+		tableView.separatorStyle = .singleLine
 		return channels.count
 	}
 	

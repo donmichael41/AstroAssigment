@@ -10,5 +10,5 @@ import Foundation
 
 
 final class ChannelListViewModel {
-	var channel: [ChannelReponse.Channel]?
+	var channel: [ChannelListReponse.Channel]?
 }

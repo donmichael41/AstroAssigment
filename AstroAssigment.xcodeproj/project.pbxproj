@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E1E19E21FA9C9CB00D438C1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E11FA9C9CB00D438C1 /* Model.swift */; };
+		0E1E19E21FA9C9CB00D438C1 /* ChannelListReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E11FA9C9CB00D438C1 /* ChannelListReponse.swift */; };
 		0E1E19E41FA9CB1D00D438C1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E31FA9CB1D00D438C1 /* Request.swift */; };
 		0E1E19E61FA9CE5900D438C1 /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E51FA9CE5900D438C1 /* ChannelListViewController.swift */; };
 		0E1E19E81FA9CEF400D438C1 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E19E71FA9CEF400D438C1 /* ChannelListViewModel.swift */; };
@@ -23,10 +23,16 @@
 		0E3774BE1FA2F46C0038814B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E3774BD1FA2F46C0038814B /* Assets.xcassets */; };
 		0E3774C11FA2F46C0038814B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E3774BF1FA2F46C0038814B /* LaunchScreen.storyboard */; };
 		0E6ED2E31FA2F96400E89FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6ED2E21FA2F96400E89FC0 /* Main.storyboard */; };
+		0E8BA2441FAB6E6D00885759 /* ChannelsReponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BA2431FAB6E6D00885759 /* ChannelsReponse.swift */; };
+		0E8BA2461FAB741C00885759 /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BA2451FAB741C00885759 /* ChannelsViewController.swift */; };
+		0E8BA2481FAB74FB00885759 /* ChannelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BA2471FAB74FB00885759 /* ChannelCollectionViewCell.swift */; };
+		0EAAB4411FAC1FA0003C3799 /* ChannelListViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAAB4401FAC1FA0003C3799 /* ChannelListViewController+Extension.swift */; };
+		0ED40B301FACD4C800A4C8D1 /* UILayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED40B2E1FACD4C800A4C8D1 /* UILayout.swift */; };
+		0ED40B311FACD4C800A4C8D1 /* UIViewAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED40B2F1FACD4C800A4C8D1 /* UIViewAutolayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E1E19E11FA9C9CB00D438C1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		0E1E19E11FA9C9CB00D438C1 /* ChannelListReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListReponse.swift; sourceTree = "<group>"; };
 		0E1E19E31FA9CB1D00D438C1 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		0E1E19E51FA9CE5900D438C1 /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
 		0E1E19E71FA9CEF400D438C1 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
@@ -44,6 +50,12 @@
 		0E3774C01FA2F46C0038814B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E3774C21FA2F46C0038814B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E6ED2E21FA2F96400E89FC0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0E8BA2431FAB6E6D00885759 /* ChannelsReponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsReponse.swift; sourceTree = "<group>"; };
+		0E8BA2451FAB741C00885759 /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
+		0E8BA2471FAB74FB00885759 /* ChannelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionViewCell.swift; sourceTree = "<group>"; };
+		0EAAB4401FAC1FA0003C3799 /* ChannelListViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChannelListViewController+Extension.swift"; sourceTree = "<group>"; };
+		0ED40B2E1FACD4C800A4C8D1 /* UILayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayout.swift; sourceTree = "<group>"; };
+		0ED40B2F1FACD4C800A4C8D1 /* UIViewAutolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutolayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,14 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E1E19E91FA9D45E00D438C1 /* Channel */ = {
+		0E1E19E91FA9D45E00D438C1 /* ChannelList */ = {
 			isa = PBXGroup;
 			children = (
 				0E1E19E71FA9CEF400D438C1 /* ChannelListViewModel.swift */,
 				0E1E19E51FA9CE5900D438C1 /* ChannelListViewController.swift */,
+				0EAAB4401FAC1FA0003C3799 /* ChannelListViewController+Extension.swift */,
 				0E1E19FC1FAAC19800D438C1 /* ChannelListCell.swift */,
 			);
-			path = Channel;
+			path = ChannelList;
 			sourceTree = "<group>";
 		};
 		0E1E19EA1FA9E2F500D438C1 /* NetWorkLayer */ = {
@@ -118,16 +131,37 @@
 		0E3774B51FA2F46C0038814B /* AstroAssigment */ = {
 			isa = PBXGroup;
 			children = (
+				0ED40B2D1FACD4C800A4C8D1 /* UIView+Autolayout */,
 				0E3774B61FA2F46C0038814B /* AppDelegate.swift */,
-				0E1E19E11FA9C9CB00D438C1 /* Model.swift */,
+				0E1E19E11FA9C9CB00D438C1 /* ChannelListReponse.swift */,
+				0E8BA2431FAB6E6D00885759 /* ChannelsReponse.swift */,
 				0E1E19EA1FA9E2F500D438C1 /* NetWorkLayer */,
 				0E6ED2E21FA2F96400E89FC0 /* Main.storyboard */,
-				0E1E19E91FA9D45E00D438C1 /* Channel */,
+				0E8BA2491FAB750100885759 /* Channels */,
+				0E1E19E91FA9D45E00D438C1 /* ChannelList */,
 				0E3774BD1FA2F46C0038814B /* Assets.xcassets */,
 				0E3774BF1FA2F46C0038814B /* LaunchScreen.storyboard */,
 				0E3774C21FA2F46C0038814B /* Info.plist */,
 			);
 			path = AstroAssigment;
+			sourceTree = "<group>";
+		};
+		0E8BA2491FAB750100885759 /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				0E8BA2471FAB74FB00885759 /* ChannelCollectionViewCell.swift */,
+				0E8BA2451FAB741C00885759 /* ChannelsViewController.swift */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		0ED40B2D1FACD4C800A4C8D1 /* UIView+Autolayout */ = {
+			isa = PBXGroup;
+			children = (
+				0ED40B2E1FACD4C800A4C8D1 /* UILayout.swift */,
+				0ED40B2F1FACD4C800A4C8D1 /* UIViewAutolayout.swift */,
+			);
+			path = "UIView+Autolayout";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,15 +257,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E1E19EE1FA9E3A700D438C1 /* Commons.swift in Sources */,
+				0EAAB4411FAC1FA0003C3799 /* ChannelListViewController+Extension.swift in Sources */,
 				0E1E19E81FA9CEF400D438C1 /* ChannelListViewModel.swift in Sources */,
+				0E8BA2481FAB74FB00885759 /* ChannelCollectionViewCell.swift in Sources */,
 				0E1E19F21FA9E67F00D438C1 /* Dispatcher.swift in Sources */,
+				0ED40B301FACD4C800A4C8D1 /* UILayout.swift in Sources */,
 				0E1E19F01FA9E66600D438C1 /* ServiceConfig.swift in Sources */,
 				0E1E19FD1FAAC19800D438C1 /* ChannelListCell.swift in Sources */,
 				0E1E19F51FA9E88E00D438C1 /* Response.swift in Sources */,
 				0E1E19E41FA9CB1D00D438C1 /* Request.swift in Sources */,
 				0E1E19EC1FA9E31300D438C1 /* Webservice.swift in Sources */,
+				0E8BA2441FAB6E6D00885759 /* ChannelsReponse.swift in Sources */,
 				0E3774B71FA2F46C0038814B /* AppDelegate.swift in Sources */,
-				0E1E19E21FA9C9CB00D438C1 /* Model.swift in Sources */,
+				0ED40B311FACD4C800A4C8D1 /* UIViewAutolayout.swift in Sources */,
+				0E8BA2461FAB741C00885759 /* ChannelsViewController.swift in Sources */,
+				0E1E19E21FA9C9CB00D438C1 /* ChannelListReponse.swift in Sources */,
 				0E1E19E61FA9CE5900D438C1 /* ChannelListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
