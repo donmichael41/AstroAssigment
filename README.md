@@ -1,3 +1,7 @@
-+  ChannelList: Load data for offline support
++  ChannelList:
+	- Load data for offline support (Cached data in the 1st)
+	- Mark favourite required login
+	
 +  Channels: Paging loading, cached image
-+  Login facebook support
+
++  Login facebook support for mark favourite
