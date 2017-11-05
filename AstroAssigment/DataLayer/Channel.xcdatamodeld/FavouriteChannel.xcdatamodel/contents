@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13533" systemVersion="17B42a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Channel" representedClassName="Channel" syncable="YES">
+        <attribute name="channelID" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="channelStbNumber" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="channelTitle" attributeType="String" syncable="YES"/>
+        <attribute name="favourite" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="ChannelDetail" representedClassName="ChannelDetail" syncable="YES" codeGenerationType="class">
+        <attribute name="chanelId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="channelStbNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="channelTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="siChannelId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="channelExtRef" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ChannelExtRef" syncable="YES"/>
+    </entity>
+    <entity name="ChannelExtRef" representedClassName="ChannelExtRef" syncable="YES" codeGenerationType="class">
+        <attribute name="subSystem" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="system" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Channel" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="ChannelDetail" positionX="-63" positionY="9" width="128" height="120"/>
+        <element name="ChannelExtRef" positionX="-54" positionY="18" width="128" height="90"/>
+    </elements>
+</model>

@@ -67,5 +67,24 @@
 			</dict>
 		</dict>
 	</dict>
+	
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb124991458177918</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>124991458177918</string>
+	<key>FacebookDisplayName</key>
+	<string>AssigmentAstro</string>
+	
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
 </dict>
 </plist>
