@@ -54,7 +54,7 @@ extension UserViewController: LoginButtonDelegate {
 				UserDefaults.standard.set(false, forKey: kIsUserLogin)
 				updateState()
 			} else {
-				print(error?.localizedDescription)
+				print(error?.localizedDescription ?? "")
 			}
 		}
 		updateState()

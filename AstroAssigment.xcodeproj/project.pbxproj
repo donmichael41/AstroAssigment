@@ -27,6 +27,7 @@
 		0ED38A5C1FAEFF8700FF157D /* ChannelCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED38A5A1FAEFF8700FF157D /* ChannelCollectionReusableView.swift */; };
 		0ED38A5D1FAEFF8700FF157D /* ChannelCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0ED38A5B1FAEFF8700FF157D /* ChannelCollectionReusableView.xib */; };
 		0ED38A601FAF0A3A00FF157D /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED38A5F1FAF0A3A00FF157D /* MainTabBarViewController.swift */; };
+		0ED38A621FAF12FF00FF157D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0ED38A611FAF12FF00FF157D /* README.md */; };
 		0ED40B301FACD4C800A4C8D1 /* UILayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED40B2E1FACD4C800A4C8D1 /* UILayout.swift */; };
 		0ED40B311FACD4C800A4C8D1 /* UIViewAutolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED40B2F1FACD4C800A4C8D1 /* UIViewAutolayout.swift */; };
 		0ED40B361FAD8E8700A4C8D1 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED40B351FAD8E8700A4C8D1 /* Common.swift */; };
@@ -58,6 +59,7 @@
 		0ED38A5A1FAEFF8700FF157D /* ChannelCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCollectionReusableView.swift; sourceTree = "<group>"; };
 		0ED38A5B1FAEFF8700FF157D /* ChannelCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelCollectionReusableView.xib; sourceTree = "<group>"; };
 		0ED38A5F1FAF0A3A00FF157D /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		0ED38A611FAF12FF00FF157D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0ED40B2E1FACD4C800A4C8D1 /* UILayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILayout.swift; sourceTree = "<group>"; };
 		0ED40B2F1FACD4C800A4C8D1 /* UIViewAutolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAutolayout.swift; sourceTree = "<group>"; };
 		0ED40B351FAD8E8700A4C8D1 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		0E3774AA1FA2F46C0038814B = {
 			isa = PBXGroup;
 			children = (
+				0ED38A611FAF12FF00FF157D /* README.md */,
 				0E3774B51FA2F46C0038814B /* AstroAssigment */,
 				0E3774B41FA2F46C0038814B /* Products */,
 				2913CE34917FE3CCE360A141 /* Pods */,
@@ -292,6 +295,7 @@
 			files = (
 				0E6ED2E31FA2F96400E89FC0 /* Main.storyboard in Resources */,
 				0E3774C11FA2F46C0038814B /* LaunchScreen.storyboard in Resources */,
+				0ED38A621FAF12FF00FF157D /* README.md in Resources */,
 				0E3774BE1FA2F46C0038814B /* Assets.xcassets in Resources */,
 				0ED38A5D1FAEFF8700FF157D /* ChannelCollectionReusableView.xib in Resources */,
 			);
